@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    /* Primary color */
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+
+    /* Neutral color */
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Eggshell);
+    font-family: "Outfit";
+    color: var(--Nutmeg);
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Young Serif";
+    color: var(--Dark-Raspberry);
+    font-weight: 400;
+}
+
+strong {
+    color: var(--Dark-Raspberry);
+}
+
+.container {
+    background-color: var(--White);
+    margin: 100px auto;
+    max-width: 650px;
+    border-radius: 20px;
+}
+
+.container img {
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 40px 40px 0 40px;
+}
+
+.content-container {
+    margin: 40px 40px 0 40px;
+    padding-bottom: 40px;
+}
+
+.preparation {
+    background-color: var(--Rose-White);
+    padding: 30px;
+    border-radius: 8px;
+    margin: 40px 0;
+}
+
+.preparation ul {
+    margin-bottom: 0;
+}
+
+.preparation p {
+    font-size: 19px;
+}
+
+li {
+    margin: 8px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    position: relative;
+}
+
+ul li::before {
+    content: '\2022';
+    font-size: 1.2rem;
+    margin-right: 2rem;
+    display: inline-block;
+}
+
+.hr {
+    margin: 40px 0;
+    border-top: 2px solid var(--Eggshell);
+}
+
+ol {
+    list-style-type: none;
+    counter-reset: my-counter;
+    padding-left: 0;
+}
+
+ol li {
+    /* padding-left: 10px; */
+}
+
+ol li:before {
+    content: counter(my-counter) ". ";
+    counter-increment: my-counter;
+    font-weight: bold;
+    display: inline-block;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    border-bottom: 2px solid var(--Eggshell);
+    padding: 10px;
+}
+
+tr:last-child td {
+    border: unset;
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        padding-top: 0;
+        margin: 0 auto;
+        border-radius: 0;
+    }
+
+    body {
+        margin: 0;
+    }
+    
+    .container img {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+    }
+}
