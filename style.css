@@ -42,7 +42,7 @@ strong {
 .container {
     background-color: var(--White);
     margin: 100px auto;
-    max-width: 650px;
+    max-width: 750px;
     border-radius: 20px;
 }
 
